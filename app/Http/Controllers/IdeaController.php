@@ -46,12 +46,7 @@ class IdeaController extends Controller
 
     public function edit(Idea $idea)
     {
-        // if(auth()->id() !== $$idea->user_id){
-        //     // return redirect()->route('idea.show', $$idea->id)->with('success', 'Hey you dont have access to Edit into this user');
 
-        //     abort(404);
-
-        // }
         $this->authorize('idea-delete', $idea);
 
 
@@ -62,12 +57,7 @@ class IdeaController extends Controller
 
     public function update(Idea $idea)
     {
-        // if(auth()->id() !== $$idea->user_id){
-
-        //     abort(404);
-        //     // return redirect()->route('idea.show', $$idea->id)->with('success', 'Hey you dont have access to Edit into this user');
-
-        // }
+   
         $this->authorize('idea-edit', $idea);
 
        $validate = request()->validate([
