@@ -12,13 +12,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // if(!Gate::allows('admins'))
-        // {
-        //     return redirect()->route('dashboard');
-        // }
-
-        // $this->authorize('admins');
-
         return view('admin.dashboard');
     }
 }
